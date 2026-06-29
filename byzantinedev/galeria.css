@@ -21,11 +21,11 @@
 
 .galeria-item:hover {
   transform: translateY(-8px) scale(1.04);
-  box-shadow: 0 20px 35px rgba(94, 25, 52, 0.25); /* Sombra suave com matiz da cor imperial */
+  box-shadow: 0 20px 35px rgba(94, 25, 52, 0.25); 
   border-color: var(--color-accent);
 }
 
-/* Responsividade Líquida (Mobile-First / Adaptativa) */
+
 @media (max-width: 768px) {
   .galeria {
     grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));

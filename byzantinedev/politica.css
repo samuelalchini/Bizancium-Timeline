@@ -1,4 +1,4 @@
-/* Página de Política - Linha do Tempo */
+
 
 .politica-intro {
   max-width: 800px;
@@ -152,7 +152,7 @@
   left: 0;
 }
 
-/* Responsividade */
+
 @media (max-width: 900px) {
   .era-card__media {
     min-height: 280px;

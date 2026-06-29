@@ -40,7 +40,7 @@
 
         <section class="timeline">
 
-            <!-- 1025 -->
+            
             <article class="era-card">
                 <div class="era-card__media">
                     <img src="politicsimg/Byzantine-Empire-1025.webp" alt="Imperador Basílio II em trajes imperiais">
@@ -75,7 +75,7 @@
                 </div>
             </article>
 
-            <!-- 1118 -->
+            
             <article class="era-card">
                 <div class="era-card__media">
                     <img src="politicsimg/1118.webp" alt="Imperador Aleixo I Comneno">
@@ -109,7 +109,7 @@
                 </div>
             </article>
 
-            <!-- 1265 -->
+            
             <article class="era-card">
                 <div class="era-card__media">
                     <img src="politicsimg/1265.webp" alt="Imperador Miguel VIII Paleólogo">
@@ -143,7 +143,7 @@
                 </div>
             </article>
 
-            <!-- 1453 -->
+            
             <article class="era-card">
                 <div class="era-card__media">
                     <img src="politicsimg/1453.png" alt="Queda de Constantinopla em 1453">
@@ -207,12 +207,14 @@
       const isOpen = nav.classList.toggle("open");
       hamburger.classList.toggle("open", isOpen);
       hamburger.setAttribute("aria-expanded", isOpen);
+      document.body.classList.toggle("no-scroll", isOpen);
     });
     nav.querySelectorAll("a").forEach(link => {
       link.addEventListener("click", () => {
         nav.classList.remove("open");
         hamburger.classList.remove("open");
         hamburger.setAttribute("aria-expanded", "false");
+        document.body.classList.remove("no-scroll");
       });
     });
   </script>

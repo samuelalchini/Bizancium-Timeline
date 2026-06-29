@@ -14,7 +14,7 @@
   --text-inverse: #F9F8F6;
 }
 
-/* Reset & Base Styles */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -31,7 +31,7 @@ body {
   flex-direction: column;
 }
 
-/* Header & Navigation */
+
 header {
   background-color: var(--color-primary-dark);
   border-bottom: 3px solid var(--color-accent);
@@ -92,7 +92,7 @@ header nav a:hover, header nav a.active {
 }
 
 
-/* Buttons */
+
 .btn {
   display: inline-block;
   text-decoration: none;
@@ -144,7 +144,7 @@ header nav a:hover, header nav a.active {
   }
 }
 
-/* Contact Section & Form Styling */
+
 .contato-container {
   flex: 1;
   display: flex;
@@ -246,7 +246,7 @@ header nav a:hover, header nav a.active {
   box-shadow: 0 6px 15px rgba(94, 25, 52, 0.3);
 }
 
-/* Success Modal / Feedback Overlay */
+
 .feedback-overlay {
   position: fixed;
   top: 0;
@@ -315,7 +315,11 @@ header nav a:hover, header nav a.active {
 
 
 
-/* ===== HAMBURGER MENU ===== */
+body.no-scroll {
+  overflow: hidden;
+}
+
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -366,7 +370,7 @@ header nav a:hover, header nav a.active {
     align-items: center;
     justify-content: center;
     gap: 0;
-    z-index: 1000;
+    z-index: 1050;
   }
 
   header nav.open {
@@ -397,7 +401,7 @@ header nav a:hover, header nav a.active {
   }
 }
 
-/* ===== FOOTER ===== */
+
 footer {
   background-color: var(--color-primary-dark);
   border-top: 3px solid var(--color-accent);

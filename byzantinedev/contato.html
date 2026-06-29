@@ -61,7 +61,7 @@
         </section>
     </main>
 
-    <!-- Success Modal Overlay -->
+    
     <div id="feedbackOverlay" class="feedback-overlay">
         <div class="feedback-card">
             <div class="feedback-icon">✓</div>
@@ -75,7 +75,7 @@
         document.getElementById('contactForm').addEventListener('submit', function(event) {
             event.preventDefault();
             
-            // Elements
+            
             const nameInput = document.getElementById('name');
             const emailInput = document.getElementById('email');
             const passwordInput = document.getElementById('password');
@@ -86,50 +86,50 @@
             
             let isValid = true;
             
-            // Clean active errors
+            
             nameError.classList.remove('active');
             emailError.classList.remove('active');
             passwordError.classList.remove('active');
             
-            // Validate Name
+            
             if (nameInput.value.trim().length < 3) {
                 nameError.classList.add('active');
                 isValid = false;
             }
             
-            // Validate Email with Regex
+            
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(emailInput.value.trim())) {
                 emailError.classList.add('active');
                 isValid = false;
             }
             
-            // Validate Password (must contain more than 6 characters/digits)
+            
             if (passwordInput.value.length <= 6) {
                 passwordError.classList.add('active');
                 isValid = false;
             }
             
             if (isValid) {
-                // Show Success Modal
+                
                 const overlay = document.getElementById('feedbackOverlay');
                 overlay.style.display = 'flex';
-                // Trigger reflow for transition
+                
                 overlay.offsetHeight;
                 overlay.classList.add('active');
                 
-                // Clear Form
+                
                 document.getElementById('contactForm').reset();
             }
         });
 
-        // Close Modal
+        
         document.getElementById('closeFeedback').addEventListener('click', function() {
             const overlay = document.getElementById('feedbackOverlay');
             overlay.classList.remove('active');
             setTimeout(() => {
                 overlay.style.display = 'none';
-            }, 400); // matches the CSS transition length
+            }, 400); 
         });
     </script>
   <footer>
@@ -160,12 +160,14 @@
       const isOpen = nav.classList.toggle("open");
       hamburger.classList.toggle("open", isOpen);
       hamburger.setAttribute("aria-expanded", isOpen);
+      document.body.classList.toggle("no-scroll", isOpen);
     });
     nav.querySelectorAll("a").forEach(link => {
       link.addEventListener("click", () => {
         nav.classList.remove("open");
         hamburger.classList.remove("open");
         hamburger.setAttribute("aria-expanded", "false");
+        document.body.classList.remove("no-scroll");
       });
     });
   </script>
