@@ -36,7 +36,7 @@ Nenhum. O projeto foi desenvolvido com **HTML5, CSS3 e JavaScript puro**, o que 
 ## 2. Estrutura do Site
 
 ### `index.html` — Home
-Página principal com três seções:
+Página principal com quatro seções:
 - **Introdução** com o propósito do site e símbolo imperial
 - **O Nascimento de Bizâncio** — card com imagem e texto sobre a origem do império a partir da divisão romana e a Dinastia Macedônica
 - **Principais Inovações** — quatro seções alternadas imagem/texto cobrindo: Fogo Grego, Preservação Cultural, Arquitetura Monumental e Alfabeto Cirílico
@@ -44,6 +44,13 @@ Página principal com três seções:
 
 ### `galeria.html` — Galeria
 Grid responsivo com 19 imagens históricas (mosaicos, manuscritos, arquitetura, moedas, mapas). Ao passar o mouse sobre cada imagem, uma legenda descritiva surge com animação de deslize, identificando o que é retratado e o período histórico.
+
+### `imperadores.html` — Imperadores
+Página dedicada a quatro imperadores que definiram os rumos de Bizâncio, apresentados em seções alternadas imagem/texto com período de reinado, epíteto e tags temáticas:
+- **Basílio II** (976–1025) — apogeu territorial e subjugação da Bulgária
+- **Alexios Komnenos** (1081–1118) — restauração após Manziquerta e estopim da Primeira Cruzada
+- **Miguel VIII Paleólogo** (1261–1282) — reconquista de Constantinopla e fundação da última dinastia
+- **Constantino XI** (1449–1453) — último imperador e resistência final na queda de Constantinopla
 
 ### `politica.html` — Política
 Linha do tempo com quatro momentos decisivos da história política bizantina: **1025** (Apogeu de Basílio II), **1118** (Restauração Comnena), **1265** (Restauração de Constantinopla) e **1453** (Queda). Cada era apresenta imagem, resumo e dois blocos destacando ameaças internas e externas daquele período.
@@ -69,8 +76,8 @@ Formulário de registro com validação em JavaScript:
 | Nome | O que desenvolveu |
 |---|---|
 | **Brayan Marques Eger** | Página `index.html` — estrutura da home, seções de inovações, nascimento de Bizâncio e queda de Constantinopla |
-| **Felipe** | Esqueleto do site — estrutura base HTML, CSS global (`styles.css`), componentes reutilizáveis de header e navegação |
-| **Jonathan Felipe Dinis Kovaleski** | Página de imperadores (a ser adicionada) — pesquisa e desenvolvimento da seção dedicada aos imperadores bizantinos |
+| **Felipe Utpadel** | Esqueleto do site — estrutura base HTML, CSS global (`styles.css`), componentes reutilizáveis de header e navegação |
+| **Jonathan Felipe Dinis Kovaleski** | Página `imperadores.html` — pesquisa histórica e desenvolvimento da seção dedicada aos quatro imperadores bizantinos |
 | **Samuel Lampert Alchini** | Página `politica.html` — linha do tempo política com eras, ameaças internas/externas; integração final do projeto e unificação dos arquivos do grupo |
 
 ---
