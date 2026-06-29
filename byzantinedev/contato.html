@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Registre seu interesse na história do Império Bizantino e envie uma mensagem.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Império Bizantino - Contato</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="img/ByzantineEagle.png" alt="Águia Bizantina"> 
+            <h1>Império Bizantino</h1>
+        </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="politica.html">Política</a>
+            <a href="contato.html" class="active">Contato</a>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <main class="contato-container">
+        <section class="contato-card">
+            <h2 class="contato-card__title">Área do Cidadão</h2>
+            <p class="contato-card__subtitle">Registre seu interesse na história bizantina</p>
+            
+            <form id="contactForm" novalidate>
+                <div class="form-group">
+                    <label for="name" class="form-label">Nome Completo</label>
+                    <input type="text" id="name" class="form-input" placeholder="Digite seu nome" required>
+                    <span id="nameError" class="form-error">O nome deve conter pelo menos 3 caracteres.</span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" id="email" class="form-input" placeholder="seu-email@exemplo.com" required>
+                    <span id="emailError" class="form-error">Digite um formato de e-mail válido.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="form-label">Senha Imperial</label>
+                    <input type="password" id="password" class="form-input" placeholder="Min. 7 caracteres" required>
+                    <span id="passwordError" class="form-error">A senha deve ter mais de 6 caracteres.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="message" class="form-label">Mensagem (Opcional)</label>
+                    <textarea id="message" class="form-input" rows="4" placeholder="Deixe seus comentários sobre Bizâncio..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Enviar Registro</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Success Modal Overlay -->
+    <div id="feedbackOverlay" class="feedback-overlay">
+        <div class="feedback-card">
+            <div class="feedback-icon">✓</div>
+            <h3 class="feedback-title">Registro Concluído!</h3>
+            <p class="feedback-message">Sua mensagem foi enviada e seu registro no Império de Bizâncio foi simulado com sucesso. Bem-vindo à corte imperial!</p>
+            <button id="closeFeedback" class="btn btn--primary">Continuar Navegando</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Elements
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const passwordInput = document.getElementById('password');
+            
+            const nameError = document.getElementById('nameError');
+            const emailError = document.getElementById('emailError');
+            const passwordError = document.getElementById('passwordError');
+            
+            let isValid = true;
+            
+            // Clean active errors
+            nameError.classList.remove('active');
+            emailError.classList.remove('active');
+            passwordError.classList.remove('active');
+            
+            // Validate Name
+            if (nameInput.value.trim().length < 3) {
+                nameError.classList.add('active');
+                isValid = false;
+            }
+            
+            // Validate Email with Regex
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailInput.value.trim())) {
+                emailError.classList.add('active');
+                isValid = false;
+            }
+            
+            // Validate Password (must contain more than 6 characters/digits)
+            if (passwordInput.value.length <= 6) {
+                passwordError.classList.add('active');
+                isValid = false;
+            }
+            
+            if (isValid) {
+                // Show Success Modal
+                const overlay = document.getElementById('feedbackOverlay');
+                overlay.style.display = 'flex';
+                // Trigger reflow for transition
+                overlay.offsetHeight;
+                overlay.classList.add('active');
+                
+                // Clear Form
+                document.getElementById('contactForm').reset();
+            }
+        });
+
+        // Close Modal
+        document.getElementById('closeFeedback').addEventListener('click', function() {
+            const overlay = document.getElementById('feedbackOverlay');
+            overlay.classList.remove('active');
+            setTimeout(() => {
+                overlay.style.display = 'none';
+            }, 400); // matches the CSS transition length
+        });
+    </script>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-section">
+        <h3 class="footer-section__title">Integrantes do Grupo</h3>
+        <ul class="footer-names">
+          <li>Brayan Marques Eger</li>
+          <li>Felipe</li>
+          <li>Jonathan Felipe Dinis Kovaleski</li>
+          <li>Samuel Lampert Alchini</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3 class="footer-section__title">Sabedoria de Bizâncio</h3>
+        <blockquote class="footer-quote">
+          "A vitória não pertence aos que têm mais soldados, mas aos que têm mais sabedoria."
+          <cite>— Nicéforo II Focas, Imperador de Bizâncio (963–969)</cite>
+        </blockquote>
+      </div>
+    </div>
+    <p class="footer-bottom">© Império Bizantino — Trabalho Acadêmico N3</p>
+  </footer>
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const nav = document.querySelector("header nav");
+    hamburger.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("open");
+      hamburger.classList.toggle("open", isOpen);
+      hamburger.setAttribute("aria-expanded", isOpen);
+    });
+    nav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("open");
+        hamburger.classList.remove("open");
+        hamburger.setAttribute("aria-expanded", "false");
+      });
+    });
+  </script>
+</body>
+</html>

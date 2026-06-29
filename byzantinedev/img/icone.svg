@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Outer Gold Ring -->
+  <circle cx="50" cy="50" r="45" fill="none" stroke="#D4AF37" stroke-width="3" />
+  <circle cx="50" cy="50" r="42" fill="none" stroke="#E5C768" stroke-dasharray="2, 2" stroke-width="1" />
+  
+  <!-- Outer Decorative Dots -->
+  <g fill="#D4AF37">
+    <circle cx="50" cy="8" r="2" />
+    <circle cx="50" cy="92" r="2" />
+    <circle cx="8" cy="50" r="2" />
+    <circle cx="92" cy="50" r="2" />
+    <circle cx="20.5" cy="20.5" r="2" />
+    <circle cx="79.5" cy="20.5" r="2" />
+    <circle cx="20.5" cy="79.5" r="2" />
+    <circle cx="79.5" cy="79.5" r="2" />
+  </g>
+
+  <!-- Inner Burgundy/Gold Mandala Base -->
+  <circle cx="50" cy="50" r="33" fill="#5E1934" stroke="#D4AF37" stroke-width="2" />
+  
+  <!-- Byzantine Cross / Star Pattern -->
+  <path d="M 50 20 L 53 38 L 70 38 L 56 48 L 62 65 L 50 54 L 38 65 L 44 48 L 30 38 L 47 38 Z" fill="#D4AF37" stroke="#E5C768" stroke-width="0.5" />
+  
+  <!-- Inner Details -->
+  <circle cx="50" cy="50" r="14" fill="#3D0E20" stroke="#D4AF37" stroke-width="1.5" />
+  <circle cx="50" cy="50" r="6" fill="#D4AF37" />
+  <circle cx="50" cy="50" r="2" fill="#FFFFFF" />
+</svg>

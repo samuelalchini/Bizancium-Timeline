@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Galeria de imagens do Império Bizantino: mosaicos, ícones, manuscritos e arquitetura imperial.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="galeria.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Império Bizantino - Galeria</title>
+
+<style>
+.galeria-figure {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.galeria-figure .galeria-item {
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  display: block;
+  width: 100%;
+}
+
+.galeria-figure:hover .galeria-item {
+  transform: scale(1.05);
+  transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.galeria-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(transparent, rgba(26, 24, 28, 0.88));
+  color: #F9F8F6;
+  font-size: 0.82rem;
+  padding: 1.8rem 1rem 0.75rem;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.galeria-figure:hover .galeria-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="img/ByzantineEagle.png" alt="Águia Bizantina"> 
+            <h1>Império Bizantino</h1>
+        </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="galeria.html" class="active">Galeria</a>
+            <a href="politica.html">Política</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <main>
+                <section class="galeria">
+          <figure class="galeria-figure">
+            <img src="img/b1.webp" class="galeria-item" alt="Mosaico da Basílica de San Vitale, Ravenna — séc. VI">
+            <figcaption class="galeria-caption">Mosaico do Imperador Justiniano I e sua corte — Basílica de San Vitale, séc. VI</figcaption>
+          </figure>
+          <figure class="galeria-figure">
+            <img src="img/b2.jpg" class="galeria-item" alt="Mapa do Império Bizantino em sua maior extensão — 565 d.C.">
+            <figcaption class="galeria-caption">Mosaico da Virgem Maria com o Menino Jesus e imperadores — Hagia Sophia, séc. X</figcaption>
+          </figure>
+          <figure class="galeria-figure">
+            <img src="img/b3.webp" class="galeria-item" alt="Iconografia clássica de santos — tradição ortodoxa">
+            <figcaption class="galeria-caption">Mapa do Império Bizantino em sua maior extensão — 565 d.C.</figcaption>
+          </figure>
+          <figure class="galeria-figure">
+            <img src="img/b4.webp" class="galeria-item" alt="Cristo Pantocrator em mosaico dourado — séc. XI">
+            <figcaption class="galeria-caption">Basílica de Santa Sofia (Hagia Sophia) — Constantinopla, 537 d.C.</figcaption>
+          </figure>
+          <figure class="galeria-figure">
+            <img src="img/b5.jpg" class="galeria-item" alt="Interior de basílica: cúpulas e afrescos imperiais">
+            <figcaption class="galeria-caption">Mosaico da Virgem Theotokos (Mãe de Deus) — arte sacra bizantina, séc. XII</figcaption>
+          </figure>
+          <figure class="galeria-figure">
+            <img src="img/b6.jpg" class="galeria-item" alt="Manuscrito iluminado com escrita grega — séc. IX">
+            <figcaption class="galeria-caption">Pintura retratando a Queda de Constantinopla — 29 de maio de 1453</figcaption>
+          </figure>
+          <figure class="galeria-figure">
+            <img src="img/b7.webp" class="galeria-item" alt="Coroa imperial com ouro e pedras preciosas — séc. X">
+            <figcaption class="galeria-caption">Interior monumental da Basílica de Santa Sofia — cúpula e arcadas douradas</figcaption>
+          </figure>
+          <figure class="galeria-figure">
+            <img src="img/b8.jpg" class="galeria-item" alt="Imperador em trajes roxos e dourados — séc. XI">
+            <figcaption class="galeria-caption">Afresco do Batismo de Constantino — Stanze di Raffaello, Vaticano, séc. XVI</figcaption>
+          </figure>
+          <figure class="galeria-figure">
+            <img src="img/b9.jpg" class="galeria-item" alt="Basílica de Santa Sofia (Hagia Sophia) — 537 d.C.">
+            <figcaption class="galeria-caption">Reconstituição artística de Constantinopla e o Hipódromo Imperial</figcaption>
+          </figure>
+          <figure class="galeria-figure">
+            <img src="img/b10.webp" class="galeria-item" alt="Ícone pintado sobre madeira com halo de ouro — séc. XII">
+            <figcaption class="galeria-caption">Solidus: moedas de ouro bizantinas com efígies imperiais — séc. V–VI</figcaption>
+          </figure>
+          <figure class="galeria-figure">
+            <img src="img/b11.webp" class="galeria-item" alt="Mosaico da Imperatriz Teodora e sua corte — séc. VI">
+            <figcaption class="galeria-caption">Estátua de Constantino I, o Grande — fundador de Constantinopla</figcaption>
+          </figure>
+          <figure class="galeria-figure">
+            <img src="img/b12.jpg" class="galeria-item" alt="Capitel de coluna com entalhes geométricos">
+            <figcaption class="galeria-caption">Ícone imperial em mosaico dourado — imperador com coroa e vestes cerimoniais</figcaption>
+          </figure>
+          <figure class="galeria-figure">
+            <img src="img/b13.webp" class="galeria-item" alt="Coroação imperial por figura celestial — séc. X">
+            <figcaption class="galeria-caption">Busto de Constantino I no Museu do Louvre — séc. IV d.C.</figcaption>
+          </figure>
+          <figure class="galeria-figure">
+            <img src="img/b14.jpg" class="galeria-item" alt="Solidus: moeda de ouro bizantina com símbolo imperial">
+            <figcaption class="galeria-caption">Bandeira do Império Bizantino — Águia Bicéfala, símbolo imperial</figcaption>
+          </figure>
+          <figure class="galeria-figure">
+            <img src="img/b15.jpg" class="galeria-item" alt="Cruz processional em ouro com incrustações de joias">
+            <figcaption class="galeria-caption">Manuscrito iluminado: batalha de cavalaria do Exército Bizantino — séc. X</figcaption>
+          </figure>
+          <figure class="galeria-figure">
+            <img src="img/b16.jpeg" class="galeria-item" alt="Virgem Maria e o Menino Jesus em mosaico — séc. XII">
+            <figcaption class="galeria-caption">Mosaico de cena cotidiana — homem com jumento, Villa Romana del Casale, séc. IV</figcaption>
+          </figure>
+          <figure class="galeria-figure">
+            <img src="img/b17.jpeg" class="galeria-item" alt="Pintura mural religiosa desgastada — basílica antiga">
+            <figcaption class="galeria-caption">Detalhe do mosaico de Justiniano I — Basílica de San Vitale, Ravenna, séc. VI</figcaption>
+          </figure>
+          <figure class="galeria-figure">
+            <img src="img/b18.jpg" class="galeria-item" alt="Manuscrito ilustrado com cenas de batalha — séc. XI">
+            <figcaption class="galeria-caption">Miniatura de batalha de cavalaria do Skylitzes de Madrid — séc. XII</figcaption>
+          </figure>
+          <figure class="galeria-figure">
+            <img src="img/b19.webp" class="galeria-item" alt="Anunciação em mosaico com detalhes dourados — séc. XII">
+            <figcaption class="galeria-caption">Solidus de ouro com efígie imperial — moeda oficial do Império Bizantino</figcaption>
+          </figure>
+        </section>
+    </main>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-section">
+        <h3 class="footer-section__title">Integrantes do Grupo</h3>
+        <ul class="footer-names">
+          <li>Brayan Marques Eger</li>
+          <li>Felipe</li>
+          <li>Jonathan Felipe Dinis Kovaleski</li>
+          <li>Samuel Lampert Alchini</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3 class="footer-section__title">Sabedoria de Bizâncio</h3>
+        <blockquote class="footer-quote">
+          "A vitória não pertence aos que têm mais soldados, mas aos que têm mais sabedoria."
+          <cite>— Nicéforo II Focas, Imperador de Bizâncio (963–969)</cite>
+        </blockquote>
+      </div>
+    </div>
+    <p class="footer-bottom">© Império Bizantino — Trabalho Acadêmico N3</p>
+  </footer>
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const nav = document.querySelector("header nav");
+    hamburger.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("open");
+      hamburger.classList.toggle("open", isOpen);
+      hamburger.setAttribute("aria-expanded", isOpen);
+    });
+    nav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("open");
+        hamburger.classList.remove("open");
+        hamburger.setAttribute("aria-expanded", "false");
+      });
+    });
+  </script>
+</body>
+</html>
