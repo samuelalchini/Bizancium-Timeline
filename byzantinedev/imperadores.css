@@ -1,0 +1,181 @@
+.imperadores-intro {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 3.5rem 2rem 1rem;
+}
+
+.imperadores-intro__title {
+  color: var(--color-primary-dark);
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.imperadores-intro__desc {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* Seção de cada imperador */
+.imperador-secao {
+  max-width: 1300px;
+  margin: 0 auto 5rem;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+
+/* Imagem */
+.imperador-imagem {
+  flex: 0 0 480px;
+}
+
+.imperador-imagem img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+  display: block;
+}
+
+/* Texto */
+.imperador-texto {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.imperador-periodo {
+  display: inline-block;
+  background-color: var(--color-primary-dark);
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 0.3rem 0.85rem;
+  border-radius: 6px;
+  align-self: flex-start;
+  margin-bottom: 0.25rem;
+}
+
+.imperador-nome {
+  color: var(--color-primary-dark);
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.imperador-epiteto {
+  color: var(--color-accent);
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.imperador-divider {
+  height: 3px;
+  width: 55px;
+  background-color: var(--color-accent);
+  border-radius: 2px;
+  margin: 0.5rem 0 0.75rem;
+}
+
+.imperador-texto p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+/* Tags */
+.imperador-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.tag {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+}
+
+.tag--militar {
+  background-color: rgba(94, 25, 52, 0.08);
+  color: var(--color-primary);
+  border: 1px solid rgba(94, 25, 52, 0.25);
+}
+
+.tag--economico {
+  background-color: rgba(212, 175, 55, 0.12);
+  color: #7a6000;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+}
+
+.tag--diplomatico {
+  background-color: rgba(31, 48, 94, 0.08);
+  color: var(--color-secondary);
+  border: 1px solid rgba(31, 48, 94, 0.25);
+}
+
+.tag--dinastia {
+  background-color: rgba(94, 25, 52, 0.05);
+  color: var(--color-primary-light);
+  border: 1px solid rgba(94, 25, 52, 0.2);
+}
+
+.tag--queda {
+  background-color: rgba(162, 58, 54, 0.08);
+  color: var(--color-terracotta);
+  border: 1px solid rgba(162, 58, 54, 0.3);
+}
+
+/* Responsivo */
+@media (max-width: 1000px) {
+  .imperador-imagem {
+    flex: 0 0 380px;
+  }
+
+  .imperador-nome {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .imperador-secao,
+  .imperador-secao--invertida {
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .imperador-imagem {
+    flex: unset;
+    width: 100%;
+  }
+
+  .imperador-nome {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .imperadores-intro {
+    padding: 2rem 1.25rem 0.5rem;
+  }
+
+  .imperador-secao {
+    padding: 0 1.25rem;
+    margin-bottom: 3rem;
+  }
+}
