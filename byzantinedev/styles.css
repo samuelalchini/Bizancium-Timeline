@@ -354,8 +354,16 @@ body.no-scroll {
 }
 
 @media (max-width: 700px) {
+  header {
+    position: relative;
+  }
+
   .hamburger {
     display: flex;
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    z-index: 1200;
   }
 
   header nav {
@@ -370,7 +378,7 @@ body.no-scroll {
     align-items: center;
     justify-content: center;
     gap: 0;
-    z-index: 1050;
+    z-index: 1100;
   }
 
   header nav.open {
